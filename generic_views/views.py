@@ -1,9 +1,11 @@
-from rest_framework import generics
+from rest_framework import generics, viewsets
 from .models import Product, Category
 from .serializers import ProductSerializer, CategorySerializer
 
 
-# GenericViews (Auto):
+# GenericViews(Auto) and (Manually) We can create CRUD with generic views automatically
+# but not create manually using genericviews we create manually CRUD by using (APIView) called base class.  :
+
 
 # 1.Create Category CRUD:
     # Create & List of Category:
@@ -22,6 +24,8 @@ class CategoryDetailView(generics.RetrieveUpdateDestroyAPIView):
     serializer_class = CategorySerializer
 
 
+
+
 # 2. Create CRUD of Product (AUTO):
     #  Create & List of Product:
 
@@ -36,4 +40,7 @@ class ProuctDetailView(generics.RetrieveUpdateDestroyAPIView):
 
     queryset = Product.objects.all()
     serializer_class = ProductSerializer
-       
+
+
+
+
