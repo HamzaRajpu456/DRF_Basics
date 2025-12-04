@@ -22,6 +22,6 @@ urlpatterns = [
     path('api/', include('api.urls')),
     path('generic/', include('generic_views.urls')),
     path('viewset/', include('viewset.urls')),
-    path('products/', include('manual_views.urls')),
+    path('manual_views/', include('manual_views.urls')),
 
 ]

@@ -46,7 +46,7 @@ class ProductDetailAPI(APIView):
     
 
     def put(self,request,id):
-        product = Product.objects.get(id)
+        product = self.get_object(id)
         if not product:
             return Response({"Error":"Product not Found!"})
         
