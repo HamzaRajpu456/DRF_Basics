@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     'api',
     'generic_views',
     'viewset',
+    'manual_views',
 
 
 ]
